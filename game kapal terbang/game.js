@@ -1569,7 +1569,6 @@ class AirplaneDodgeGame {
     }
 
     updateScore() {
-        this.score++;
         document.getElementById('score').textContent = this.score;
         
         // Increase airplane speed every 1000 points
