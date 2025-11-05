@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Ultimate 3D Airplane Dodge Game ✈️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Enhanced HUD -->
+        <div id="hud">
+            <div id="score-display">
+                <div class="hud-label">SCORE</div>
+                <div id="score">0</div>
+            </div>
+            
+            <div id="speedometer">
+                <div class="hud-label">SPEED</div>
+                <div id="speed">120</div>
+                <div class="speed-unit">KTS</div>
+            </div>
+            
+            <div id="altimeter">
+                <div class="hud-label">ALTITUDE</div>
+                <div id="altitude">1000</div>
+                <div class="altitude-unit">FT</div>
+            </div>
+            
+            <div id="health-bar">
+                <div class="hud-label">HEALTH</div>
+                <div class="health-container">
+                    <div id="health-fill"></div>
+                </div>
+            </div>
+            
+            <div id="radar">
+                <div class="hud-label">RADAR</div>
+                <canvas id="radar-canvas" width="80" height="80"></canvas>
+            </div>
+        </div>
+
+        <!-- Enhanced Game Over Screen -->
+        <div id="game-over" class="hidden">
+            <div class="game-over-content">
+                <h1>💥 MISSION FAILED 💥</h1>
+                <div class="final-score">
+                    <div class="score-label">Final Score:</div>
+                    <div id="final-score">0</div>
+                </div>
+                <div class="game-stats">
+                    <div class="stat">
+                        <span class="stat-label">Distance:</span>
+                        <span id="distance">0</span> km
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Obstacles Avoided:</span>
+                        <span id="obstacles-avoided">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Max Speed:</span>
+                        <span id="max-speed">0</span> KTS
+                    </div>
+                </div>
+                <button id="restart-btn" class="restart-button">
+                    <span class="button-text">🔄 RESTART MISSION</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Enhanced Start Screen -->
+        <div id="start-screen">
+            <div class="start-content">
+                <h1 class="game-title">
+                    <span class="title-main">🚀 ULTIMATE</span>
+                    <span class="title-sub">AIRPLANE DODGE</span>
+                    <span class="title-accent">✈️ MISSION ✈️</span>
+                </h1>
+                
+                <div class="controls-info">
+                    <div class="control-group">
+                        <h3>🎮 CONTROLS</h3>
+                        <div class="control-row">
+                            <span class="key">W / ↑</span>
+                            <span class="action">Pitch Up</span>
+                        </div>
+                        <div class="control-row">
+                            <span class="key">S / ↓</span>
+                            <span class="action">Pitch Down</span>
+                        </div>
+                        <div class="control-row">
+                            <span class="key">A / ←</span>
+                            <span class="action">Roll Left</span>
+                        </div>
+                        <div class="control-row">
+                            <span class="key">D / →</span>
+                            <span class="action">Roll Right</span>
+                        </div>
+                        <div class="control-row">
+                            <span class="key">Q</span>
+                            <span class="action">Yaw Left</span>
+                        </div>
+                        <div class="control-row">
+                            <span class="key">E</span>
+                            <span class="action">Yaw Right</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mission-brief">
+                    <h3>🎯 MISSION BRIEFING</h3>
+                    <p>Navigate through the dangerous sky zone and avoid all floating obstacles!</p>
+                    <p>Your mission: Survive as long as possible and achieve the highest score!</p>
+                </div>
+                
+                <button id="start-btn" class="start-button">
+                    <span class="button-text">🚀 LAUNCH MISSION</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
